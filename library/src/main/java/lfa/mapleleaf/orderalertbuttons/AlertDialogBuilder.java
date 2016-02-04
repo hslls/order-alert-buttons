@@ -70,7 +70,7 @@ public final class AlertDialogBuilder {
                             }
                         }
                         if (revert) {
-                            revertAlertDialogButton(alertDialog, positiveButton, negativeButton,
+                            switchAlertDialogButton(alertDialog, positiveButton, negativeButton,
                                     params);
                         }
                     }
@@ -82,7 +82,7 @@ public final class AlertDialogBuilder {
     }
 
 
-    private static void revertAlertDialogButton(final AlertDialog alertDialog, Button positiveButton,
+    private static void switchAlertDialogButton(final AlertDialog alertDialog, Button positiveButton,
                                                 Button negativeButton, final AlertDialogParams params) {
         positiveButton.setText(params.mNegativeText);
         positiveButton.setOnClickListener(new View.OnClickListener() {
