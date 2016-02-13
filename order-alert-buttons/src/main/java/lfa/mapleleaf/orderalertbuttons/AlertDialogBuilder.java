@@ -11,7 +11,7 @@ import android.widget.Button;
 
 /**
  * mapleleaf
- * <p/>
+ *
  * lifengang@gmail.com
  */
 public final class AlertDialogBuilder {

@@ -2,7 +2,7 @@ package lfa.mapleleaf.orderalertbuttons;
 
 /**
  * mapleleaf
- * <p/>
+ *
  * lifengang@gmail.com
  */
 public enum BUTTON_ALIGN {

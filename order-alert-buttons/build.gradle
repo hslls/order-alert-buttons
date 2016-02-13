@@ -50,8 +50,51 @@ task sourcesJar(type: Jar) {
     classifier = 'sources'
 }
 
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
 artifacts {
+    archives javadocJar
     archives sourcesJar
+}
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                name PROJ_NAME
+                description PROJ_DESCRIPTION
+                url PROJ_WEBSITEURL
+                packaging 'aar'
+                licenses {
+                    license {
+                        name LICENSE_NAME
+                        url LICENSE_URL
+                    }
+                }
+                scm {
+                    connection PROJ_VCSURL
+                    developerConnection PROJ_VCSURL
+                    url PROJ_WEBSITEURL
+                }
+                developers {
+                    developer {
+                        id DEVELOPER_ID
+                        name DEVELOPER_NAME
+                        email DEVELOPER_EMAIL
+                    }
+                }
+            }
+        }
+    }
 }
 
 Properties properties = new Properties()
@@ -62,8 +105,14 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = 'maven'
-        name = 'order-alert-buttons'
+        name = PROJ_NAME
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/hslls/order-alert-buttons.git'
+        vcsUrl = PROJ_VCSURL
+        version {
+            gpg {
+                sign = true
+                passphrase = properties.getProperty("bintray.gpg.password")
+            }
+        }
     }
 }
