@@ -1,4 +1,6 @@
-package lfa.mapleleaf.orderalertbuttons;
+package com.github.hlls.orderalertbuttons;
+
+import com.github.hlls.orderalertbuttons.BUTTON_ALIGN;
 
 /**
  * mapleleaf
@@ -13,5 +15,5 @@ public class AlertDialogParams {
     public String mPositiveText;
     public String mNegativeText;
     public boolean mCancelable;
-    public AlertDialogClickListener mClickListener;
+    public com.github.hlls.orderalertbuttons.AlertDialogClickListener mClickListener;
 }

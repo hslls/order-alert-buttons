@@ -1,4 +1,4 @@
-package lfa.mapleleaf.orderalertbuttons;
+package com.github.hlls.orderalertbuttons;
 
 /**
  * mapleleaf

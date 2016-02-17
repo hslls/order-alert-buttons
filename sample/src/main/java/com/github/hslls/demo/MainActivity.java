@@ -1,4 +1,4 @@
-package lfa.mapleleaf.demo;
+package com.github.hslls.demo;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -6,11 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import lfa.mapleleaf.R;
-import lfa.mapleleaf.orderalertbuttons.AlertDialogBuilder;
-import lfa.mapleleaf.orderalertbuttons.AlertDialogClickListener;
-import lfa.mapleleaf.orderalertbuttons.AlertDialogParams;
-import lfa.mapleleaf.orderalertbuttons.BUTTON_ALIGN;
+import com.github.hlls.demo.R;
+import com.github.hlls.orderalertbuttons.AlertDialogBuilder;
+import com.github.hlls.orderalertbuttons.AlertDialogClickListener;
+import com.github.hlls.orderalertbuttons.AlertDialogParams;
+import com.github.hlls.orderalertbuttons.BUTTON_ALIGN;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
