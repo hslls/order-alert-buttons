@@ -12,7 +12,7 @@ plugins {
     id "com.jfrog.bintray" version "1.6"
 }
 
-group = 'lfa.mapleleaf'
+group = 'com.github.hlls'
 version = '1.0.0'
 
 allprojects {
