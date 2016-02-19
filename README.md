@@ -3,7 +3,7 @@ Custom the order of positive and negative buttons in AlertDialog
 
 # Usage
         dependencies {
-            compile 'lfa.mapleleaf:order-alert-buttons:1.0.0'
+            compile 'com.github.hslls:order-alert-buttons:1.0.0'
         }
 
 
